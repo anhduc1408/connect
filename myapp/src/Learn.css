@@ -1,0 +1,46 @@
+.inner{
+    width: 100vw;
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+    background: #fdbe3d linear-gradient(transparent, #fff6);
+}
+@keyframes rotateAnimation {
+    from{
+        transform: rotate(0deg);
+    }to{
+        transform: rotate(360deg);
+    }
+}
+.conic{
+    position: absolute;
+    opacity: 0.2;
+    z-index: 1;
+    inset: -50vmax;
+    background-image: repeating-conic-gradient(transparent 0 10deg, #fff 10deg 20deg);
+    animation: rotateAnimation 40s linear infinite;
+}
+.content{
+    position: relative;
+    z-index: 3;
+}
+@keyframes animationtext {
+    to{
+        filter: saturate(1.75);
+        transform: translateY(40px);
+    }
+}
+.content h1{
+    margin: 0 auto;
+    align-self: flex-end;
+  margin: 0;
+  padding: 50px;
+  color: #75325d;
+  font: 11.75vw/1 'Anton';
+  text-align: center;
+  text-shadow:
+    0.25vw 0.25vw 0 #000,
+    0 0 8vw #fff;
+    animation :0.5s cubic-bezier(0.1,0.8,0.6,0.9) infinite alternate animationtext;
+}
+
